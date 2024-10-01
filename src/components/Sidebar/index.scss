@@ -149,11 +149,11 @@
     }
 
     nav {
-      width: 100%;
+      width: 50%;
       top: 0;
-      left: 0;
+      right: 0;
       background: #181818;
-      height: 100%;
+      height: max-content;
       margin: 0;
       z-index: 2;
       position: fixed;
@@ -164,8 +164,10 @@
 
       a {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
+        margin-left:30px;
+        margin-top:30px 
       }
 
       a:after {

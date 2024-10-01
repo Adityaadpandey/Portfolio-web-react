@@ -1,11 +1,12 @@
 import {
   faGithub,
+  faInstagram,
   faLinkedin,
   // faSkype,
   // faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 import {
-  // faBars,
+  faBars,
   faClose,
   faEnvelope,
   faHome,
@@ -96,19 +97,19 @@ const Sidebar = () => {
             />
           </a>
         </li>
-        {/* <li>
+        <li>
           <a
-            href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
+            href="https://instagram.com/adp_alpha"
             rel="noreferrer"
             target="_blank"
           >
             <FontAwesomeIcon
-              icon={faYoutube}
+              icon={faInstagram}
               color="#4d4d4e"
               className="anchor-icon"
             />
           </a>
-        </li> */}
+        </li>
         {/* <li>
           <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
             <FontAwesomeIcon
@@ -119,12 +120,12 @@ const Sidebar = () => {
           </a>
         </li> */}
       </ul>
-      {/* <FontAwesomeIcon
+      <FontAwesomeIcon
         onClick={() => setShowNav(true)}
         icon={faBars}
         color="rgb(255, 81, 110)"
         size="3x"
-        className='hamburger-icon' /> */}
+        className='hamburger-icon' />
     </div>
   )
 }
