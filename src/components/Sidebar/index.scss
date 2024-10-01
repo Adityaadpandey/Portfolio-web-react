@@ -14,7 +14,7 @@
     img {
       display: block;
       margin: 8px auto;
-      width: 24px;
+      width: 70px;
       height: auto;
 
       &.sub-logo {
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: rgb(255, 81, 110);
 
         svg {
           opacity: 0;
@@ -98,7 +98,7 @@
 
     a.active {
       svg {
-        color: #ffd700;
+        color: rgb(255, 81, 110);
       }
     }
   }
@@ -124,30 +124,31 @@
 
       &:hover {
         .anchor-icon {
-          color: #ffd700;
+          color: rgb(255, 81, 110);
         }
       }
     }
   }
 }
 
-.hamburger-icon, .close-icon {
+.hamburger-icon,
+.close-icon {
   display: none;
 }
 
-
 @media screen and (max-width: 1200px) {
-  .nav-bar { 
+  .nav-bar {
     background: transparent;
     position: initial;
     height: auto;
     min-height: auto;
 
-     ul, nav {
+    ul,
+    nav {
       display: none;
-     }
+    }
 
-     nav {
+    nav {
       width: 100%;
       top: 0;
       left: 0;
@@ -171,20 +172,20 @@
         opacity: 1;
         position: initial;
         width: auto;
-        margin-left: 10PX;
+        margin-left: 10px;
       }
 
       a svg {
         opacity: 1 !important;
       }
-     }
+    }
 
-     .hamburger-icon,
-     .close-icon {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        display: block;
-     }
+    .hamburger-icon,
+    .close-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+    }
   }
 }

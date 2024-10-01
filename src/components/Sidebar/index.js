@@ -1,45 +1,45 @@
-import './index.scss'
-import { useState } from 'react'
-import LogoS from '../../assets/images/logo.svg'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faLinkedin,
   faGithub,
-  faYoutube,
-  faSkype,
+  faLinkedin,
+  // faSkype,
+  // faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 import {
-  faHome,
-  faUser,
-  faEnvelope,
-  faSuitcase,
-  faBars,
+  // faBars,
   faClose,
+  faEnvelope,
+  faHome,
+  faSuitcase,
+  faUser,
 } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import LogoS from '../../assets/images/logo.svg'
+// import LogoSubtitle from '../../assets/images/logo_sub.png'
+import './index.scss'
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
     <div className="nav-bar">
-      <Link 
+      <Link
         className="logo"
         to="/"
         onClick={() => setShowNav(false)}>
         <img src={LogoS} alt="Logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
+        {/* <img className="sub-logo" src={LogoSubtitle} alt="slobodan" /> */}
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink 
+        <NavLink
           exact="true"
           activeclassname="active"
           to="/"
           onClick={() => setShowNav(false)}>
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
-        <NavLink 
+        <NavLink
           activeclassname="active"
           className="about-link"
           to="/about"
@@ -62,17 +62,17 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
-        <FontAwesomeIcon 
+        <FontAwesomeIcon
           onClick={() => setShowNav(false)}
           icon={faClose}
-          color="#ffd700"
+          color="rgb(255, 81, 110)"
           size="3x"
           className='close-icon' />
       </nav>
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
+            href="https://linkedin.com/in/adpandeyadp"
             target="_blank"
             rel="noreferrer"
           >
@@ -85,7 +85,7 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://github.com/bobangajicsm"
+            href="https://github.com/adityaadpandey"
             target="_blank"
             rel="noreferrer"
           >
@@ -96,7 +96,7 @@ const Sidebar = () => {
             />
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
             rel="noreferrer"
@@ -108,8 +108,8 @@ const Sidebar = () => {
               className="anchor-icon"
             />
           </a>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
             <FontAwesomeIcon
               icon={faSkype}
@@ -117,14 +117,14 @@ const Sidebar = () => {
               className="anchor-icon"
             />
           </a>
-        </li>
+        </li> */}
       </ul>
-      <FontAwesomeIcon 
-          onClick={() => setShowNav(true)}
-          icon={faBars}
-          color="#ffd700"
-          size="3x"
-          className='hamburger-icon' />
+      {/* <FontAwesomeIcon
+        onClick={() => setShowNav(true)}
+        icon={faBars}
+        color="rgb(255, 81, 110)"
+        size="3x"
+        className='hamburger-icon' /> */}
     </div>
   )
 }
