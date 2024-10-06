@@ -17,7 +17,7 @@ const Logo = () => {
         x: prevRotation.x + 1,
         y: prevRotation.y + 1,
       }));
-    }, 20); // Adjust the interval to control the speed of rotation
+    }, 12); // Adjust the interval to control the speed of rotation
 
     return () => clearInterval(interval);
   }, []);

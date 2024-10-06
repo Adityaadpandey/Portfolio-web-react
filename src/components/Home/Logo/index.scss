@@ -39,7 +39,7 @@
 
 
 
-// RubiksCube.scss
+// RubiksCube
 .rubiks-container {
   perspective: 1000px;
   width: 400px;
@@ -53,7 +53,7 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.2s ease;
+  transition: transform 0.4s ease;
 }
 
 .face {
@@ -71,10 +71,18 @@
     border: 1px solid #000;
   }
 }
+$clr: rgba(255, 81, 110, 0.873);
 
-.front  { transform: translateZ(100px); background-color: #ff3d00; }
-.back   { transform: rotateY(180deg) translateZ(100px); background-color: #0fbc00; }
-.left   { transform: rotateY(-90deg) translateZ(100px); background-color: #fdd835; }
-.right  { transform: rotateY(90deg) translateZ(100px); background-color: #2962ff; }
-.top    { transform: rotateX(90deg) translateZ(100px); background-color: #ffffff; }
-.bottom { transform: rotateX(-90deg) translateZ(100px); background-color: #ff6f00; }
+.front  { transform: translateZ(100px); background-color: $clr; }
+.back   { transform: rotateY(180deg) translateZ(100px); background-color: $clr; }
+.left   { transform: rotateY(-90deg) translateZ(100px); background-color: $clr; }
+.right  { transform: rotateY(90deg) translateZ(100px); background-color: $clr; }
+.top    { transform: rotateX(90deg) translateZ(100px); background-color: $clr; }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background-color: $clr; }
+
+// .front  { transform: translateZ(100px); background-color: #ff3d00; }
+// .back   { transform: rotateY(180deg) translateZ(100px); background-color: #0fbc00; }
+// .left   { transform: rotateY(-90deg) translateZ(100px); background-color: #fdd835; }
+// .right  { transform: rotateY(90deg) translateZ(100px); background-color: #2962ff; }
+// .top    { transform: rotateX(90deg) translateZ(100px); background-color: #ffffff; }
+// .bottom { transform: rotateX(-90deg) translateZ(100px); background-color: #ff6f00; }
