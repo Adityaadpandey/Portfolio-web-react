@@ -6,15 +6,16 @@
     transform: translateY(-50%);
     width: 40%;
     max-height: 90%;
+    // white-space: nowrap;
   }
 
   h1 {
-    color: #fff;
+    color: #eaeaeae8;
     font-size: 56px;
     line-height: 53px;
     margin: 0;
-    font-family: 'Coolvetica';
-    font-weight: 400;
+    font-family: 'Playfair';
+    font-weight: 600;
 
     &:before {
       content: '<h1>';
@@ -112,7 +113,7 @@
     margin: auto;
     left: 0;
 
-    video{
+    video {
       height: 400px;
       width: auto;
     }
