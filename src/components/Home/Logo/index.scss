@@ -1,14 +1,20 @@
 .logo-container {
   z-index: 0;
-  width: 400px;
-  height: 609px;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 15%;
-  bottom: 0;
-  left: auto;
-  margin: auto;
+  position:fixed;
+  // top: 5000;
+  height: 700px;
+  right: 0;
+  filter: grayscale(100);
+  margin-top: 0px;
+  margin-right: 150px;
+  bottom: 500;
+  background-blend-mode: color-burn;
+  // left: auto;
+  // margin: auto;
+  video{
+    height: 600px;
+    width: auto;
+  }
 
   svg {
     width: 100%;

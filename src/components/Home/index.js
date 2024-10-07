@@ -65,7 +65,7 @@ const Home = () => {
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={22}
+              idx={0}
             />
           </h1>
           <h2>MERN, Python, React-Native expert</h2>
