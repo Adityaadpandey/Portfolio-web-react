@@ -10,12 +10,12 @@
 }
 
 .tags {
-  color: rgb(255, 81, 110);
+  color: rgb(0, 124, 0);
   opacity: 0.9;
   position: absolute;
   bottom: 0;
   left: 120px;
-  margin-top:-15px;
+  margin-top: -15px;
   font-size: 22px;
   font-family: 'La Belle Aurore', cursive;
 }
@@ -46,7 +46,7 @@
   h1 {
     font-size: 53px;
     font-family: 'Coolvetica';
-    color: rgb(255, 81, 110);
+    color: rgb(0, 124, 0);
     font-weight: 400;
     margin-top: 0;
     position: relative;
@@ -56,7 +56,7 @@
     &:before {
       content: '<h1>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(255, 81, 110);
+      color: rgb(0, 124, 0);
       font-size: 18px;
       position: absolute;
       margin-top: -10px;
@@ -68,7 +68,7 @@
     &:after {
       content: '<h1/>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(255, 81, 110);
+      color: rgb(0, 124, 0);
       font-size: 18px;
       line-height: 18px;
       position: absolute;
@@ -89,12 +89,12 @@
       transform: translateY(0); // End in the original position
     }
   }
-  
+
   p {
     font-size: 16px;
     color: #fff;
     // left: 5px;
-    margin:40px;
+    margin: 40px;
     font-family: sans-serif;
     font-weight: 300;
     max-width: fit-content;
@@ -102,11 +102,11 @@
     animation: fadeIn 1s forwards; // Apply fade-in animation
     position: relative; // Needed for pseudo-elements
     animation-delay: 0s; // Default delay
-  
+
     &:before {
       content: '<p>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(255, 81, 110);
+      color: rgb(0, 124, 0);
       font-size: 18px;
       position: absolute;
       margin-top: -10px;
@@ -114,23 +114,23 @@
       opacity: 0.6;
       line-height: 18px;
     }
-  
+
     &:nth-of-type(1) {
       animation-delay: 2.5s; // Delay for the first child
     }
-    
+
     &:nth-of-type(2) {
       animation-delay: 3.5s; // Delay for the second child
     }
-    
+
     &:nth-of-type(3) {
       animation-delay: 4.5s; // Delay for the third child
     }
-  
+
     &:after {
       content: '<p/>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(255, 81, 110);
+      color: rgb(0, 124, 0);
       font-size: 18px;
       line-height: 18px;
       position: absolute;
@@ -140,7 +140,6 @@
       opacity: 0.6;
     }
   }
-  
 
   .text-zone {
     position: absolute;
