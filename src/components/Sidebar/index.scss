@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: rgb(0, 124, 0);
+        color: rgb(166, 0, 255);
 
         svg {
           opacity: 0;
@@ -98,7 +98,7 @@
 
     a.active {
       svg {
-        color: rgb(0, 124, 0);
+        color: rgb(166, 0, 255);
       }
     }
   }
@@ -124,7 +124,7 @@
 
       &:hover {
         .anchor-icon {
-          color: rgb(0, 124, 0);
+          color: rgb(166, 0, 255);
         }
       }
     }

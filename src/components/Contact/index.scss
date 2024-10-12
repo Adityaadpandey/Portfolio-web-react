@@ -57,12 +57,13 @@
   }
 
   .flat-button {
-    color: rgb(0, 124, 0);
+    color: rgb(166, 0, 255);
+    cursor: pointer;
     font-size: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid rgb(0, 124, 0);
+    border: 1px solid rgb(166, 0, 255);
     float: left;
     border-radius: 4px;
     background: 0 0;
@@ -110,7 +111,7 @@
     font-size: 16px;
 
     span {
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
     }
   }
 }

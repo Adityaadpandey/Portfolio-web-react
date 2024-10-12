@@ -1,0 +1,37 @@
+ 
+    {
+      name: 'Hotel Aroma',
+      description: 'Hotel management system using React, HTML, CSS',
+      image: '/img/agh.png',
+      url: 'https://github.com/user/hotel-aroma',
+    },
+    {
+      name: 'People Find',
+      description: 'Python tool for individual search using profile pictures',
+      image: '/images/people-find.png',
+      url: 'https://github.com/user/people-find',
+    },
+    {
+      name: 'Linux Package Installer',
+      description: 'Python script for package management',
+      image: '/images/linux-package-installer.png',
+      url: 'https://github.com/user/linux-package-installer',
+    },
+    {
+      name: 'A.I. (Human-like Talking Bot)',
+      description: 'Python-based chatbot that can interact with users',
+      image: '/images/ai-talking-bot.png',
+      url: 'https://github.com/user/ai-talking-bot',
+    },
+    {
+      name: 'Song Recommendation Bot',
+      description: 'Python bot for song recommendations',
+      image: '/images/song-recommendation-bot.png',
+      url: 'https://github.com/user/song-recommendation-bot',
+    },
+    {
+      name: 'Real-Time Object Detection',
+      description: 'Project for real-time object detection with advanced algorithms',
+      image: '/images/object-detection.png',
+      url: 'https://github.com/user/real-time-object-detection',
+    },

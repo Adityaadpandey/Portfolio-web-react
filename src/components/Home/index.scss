@@ -20,7 +20,7 @@
     &:before {
       content: '<h1>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -31,7 +31,7 @@
     &:after {
       content: '<h1/>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
       font-size: 18px;
       position: absolute;
       margin-top: 18px;
@@ -61,21 +61,21 @@
   }
 
   .flat-button {
-    color: rgb(0, 124, 0);
+    color: rgb(166, 0, 255);
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
     padding: 10px 18px;
-    border: 1px solid rgb(0, 124, 0);
+    border: 1px solid rgb(166, 0, 255);
     margin-top: 25px;
     float: left;
     animation: fadeInAnimation 1s 1.8s backwards;
     white-space: nowrap;
 
     &:hover {
-      background: rgb(0, 124, 0);
+      background: rgb(166, 0, 255);
       color: #333;
     }
   }

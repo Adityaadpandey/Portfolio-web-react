@@ -10,7 +10,7 @@
 }
 
 .tags {
-  color: rgb(0, 124, 0);
+  color: rgb(166, 0, 255);
   opacity: 0.9;
   position: absolute;
   bottom: 0;
@@ -46,7 +46,7 @@
   h1 {
     font-size: 53px;
     font-family: 'Coolvetica';
-    color: rgb(0, 124, 0);
+    color: rgb(166, 0, 255);
     font-weight: 400;
     margin-top: 0;
     position: relative;
@@ -56,7 +56,7 @@
     &:before {
       content: '<h1>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
       font-size: 18px;
       position: absolute;
       margin-top: -10px;
@@ -68,7 +68,7 @@
     &:after {
       content: '<h1/>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
       font-size: 18px;
       line-height: 18px;
       position: absolute;
@@ -106,7 +106,7 @@
     &:before {
       content: '<p>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
       font-size: 18px;
       position: absolute;
       margin-top: -10px;
@@ -130,7 +130,7 @@
     &:after {
       content: '<p/>';
       font-family: 'La Belle Aurore', cursive;
-      color: rgb(0, 124, 0);
+      color: rgb(166, 0, 255);
       font-size: 18px;
       line-height: 18px;
       position: absolute;
