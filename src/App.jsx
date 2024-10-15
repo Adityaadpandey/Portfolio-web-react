@@ -4,6 +4,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Layout from './components/Layout'
 import Portfolio from './components/Portfolio'
+import Guestbook from './components/Guestbook'
 import './App.scss'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/guestbook" element={<Guestbook />} />
         </Route>
       </Routes>
     </>

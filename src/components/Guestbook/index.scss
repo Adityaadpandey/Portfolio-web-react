@@ -1,0 +1,301 @@
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden; // Ensure no overflow on the entire page
+}
+
+.top-tags {
+  bottom: auto;
+  top: 35px;
+}
+
+.tags {
+  color: rgb(166, 0, 255);
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  margin-top: -15px;
+  font-size: 22px;
+  font-family: 'La Belle Aurore', cursive;
+}
+
+.bottom-tag-html {
+  margin-left: -20px;
+}
+
+.input-container {
+  display: flex; // Flex container for input fields
+  flex-direction: column; // Stack elements vertically on mobile
+  width: 100%; // Full width for the container
+  padding: 20px; // Padding around the container
+  box-sizing: border-box; // Include padding in width calculations
+
+  form {
+    width: 100%; // Full width for the form
+    ul {
+      list-style: none; // Remove bullet points from the list
+      padding: 0; // Remove default padding
+      margin: 0; // Remove default margin
+
+      li {
+        width: 100%; // Full width for each list item
+        margin-bottom: 15px; // Space below each input
+
+        // Styles for inputs
+        .username-input,
+        .other-input {
+          width: 100%; // Full width for the inputs
+          height: 50px; // Input height
+          padding: 10px; // Padding inside inputs
+          font-size: 16px; // Font size for readability
+          border: 2px solid #ccc; // Default border
+          border-radius: 4px; // Rounded corners
+          transition: border 0.3s ease; // Smooth transition for focus
+
+          &:focus {
+            outline: none; // Remove default outline
+            border-color: rgb(166, 0, 255); // Change border color on focus
+          }
+
+          &::placeholder {
+            color: #999; // Placeholder color
+          }
+        }
+
+        // Styles for the submit button
+        .flat-button {
+          // width: 10%; // Full width for the button
+          padding: 10px; // Padding for button
+          background-color: rgb(166, 0, 255); // Button background color
+          color: white; // Button text color
+          border: none; // Remove border
+          cursor: pointer; // Pointer cursor on hover
+          font-size: 16px; // Font size for button
+          border-radius: 4px; // Rounded corners
+          transition: background-color 0.3s ease; // Smooth transition for hover effect
+
+          &:hover {
+            background-color: rgb(130, 0, 200); // Darker color on hover
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.container {
+  width: 100%;
+  height: 90%; // Ensure it takes up 90% of available height
+  min-height: 566px;
+  position: relative; // Changed to relative for proper layout
+  opacity: 0;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  overflow-y: auto; // Enable vertical scrolling
+  padding: 20px; // Add some padding for the content
+}
+
+.container.guestbook-page {
+  h1 {
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    color: rgb(166, 0, 255);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 40px;
+    position: relative;
+    left: -10px;
+
+    &:before {
+      content: '<h1>';
+      font-family: 'La Belle Aurore', cursive;
+      color: rgb(166, 0, 255);
+      font-size: 18px;
+      position: absolute;
+      margin-top: -10px;
+      left: -10px;
+      opacity: 0.6;
+      line-height: 18px;
+    }
+
+    &:after {
+      content: '<h1/>';
+      font-family: 'La Belle Aurore', cursive;
+      color: rgb(166, 0, 255);
+      font-size: 18px;
+      line-height: 18px;
+      position: absolute;
+      left: -30px;
+      bottom: -20px;
+      margin-left: 20px;
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #fff;
+    margin: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
+    max-width: fit-content;
+    opacity: 0; // Start hidden
+    animation: fadeIn 1s forwards;
+    position: relative;
+    animation-delay: 0s;
+  }
+
+  .text-zone {
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+    // margin-bottom: 100px;
+  }
+
+  .thoughts-list {
+    margin-left: 30px;
+    display: grid;
+    grid-row: auto ;
+
+    // flex-wrap: wrap; // Allow wrapping of cards
+    // justify-content: space-between; // Space between cards
+    // margin-bottom: 100px;
+    margin-top: 20px;
+  }
+  
+  .thought-card {
+    background: rgba(255, 255, 255, 0.1); // Background for the card
+    border: 1px solid #ccc; // Border style
+    padding: 20px; // Inner padding for the card
+    margin-bottom: 20px; // Margin below each card
+    width: calc(100% ); // Full width with margins considered
+    max-width: 600px; // Maximum width for larger screens
+    display: flex; // Flexbox for inner content alignment
+    align-items: center; // Center items vertically
+    border-radius: 8px; // Rounded corners
+  
+    img {
+      width: 50px; // Image size
+      height: 50px; // Image height
+      border-radius: 50%; // Circular image
+      margin-right: 20px; // Space between image and text
+    }
+  
+    .thought-content {
+      h3 {
+        font-size: 1.2rem; // Font size for title
+        margin: 0; // Remove margin
+        color: rgb(166, 0, 255); // Title color
+      }
+  
+      p {
+        margin: 0.5rem 0; // Margin for paragraph
+        color: #fff; // Text color
+      }
+  
+      span {
+        font-size: 0.9rem; // Font size for the span
+        color: #888; // Color for the span
+      }
+    }
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// // Media Queries for Smaller Screens
+// @media screen and (max-width: 768px) { // Target mobile devices
+//   .input-container {
+//     flex-direction: column; // Stack inputs vertically
+//     width: 100%; // Ensure full width
+    
+//     li {
+//       width: 100%; // Full width for each input
+//       margin-right: 0; // Remove right margin
+//       margin-bottom: 10px; // Space below each input
+//     }
+
+//     .username-input,
+//     .other-input {
+//       width: 100%; // Full width inputs
+//       height: 50px; // Adjust height if needed
+//       padding: 10px; // Maintain padding
+//       font-size: 16px; // Increase font size for readability
+//     }
+//   }
+
+//   .container {
+//     padding: 20px; // Ensure padding is set for mobile
+//     width: 100%; // Ensure full width
+//     box-sizing: border-box; // Include padding in width calculations
+//   }
+
+//   .flat-button {
+//     width: 100%; // Make the button full width
+//     margin-top: 10px; // Space above the button
+//     padding: 10px; // Maintain padding
+//   }
+// }
+// Media Queries for Smaller Screens
+@media screen and (max-width: 1200px) { // Target mobile devices
+  .input-container {
+    padding: 15px; // Adjust padding for mobile
+    }
+    .thoughts-list {
+      justify-content: center; // Center cards on smaller screens
+    }
+  
+    .thought-card {
+      width: 900px; // Full width for mobile
+      margin: 10px 0; // Margin adjustments for mobile
+      padding: 15px; // Adjust padding for mobile view
+  
+      img {
+        width: 40px; // Smaller image size for mobile
+        height: 40px; // Smaller image height for mobile
+      }
+  
+      .thought-content {
+        h3 {
+          font-size: 1.5rem; // Smaller font size for mobile
+        }
+  
+        p {
+          font-size: 1rem; // Smaller paragraph font size
+        }
+  
+        span {
+          font-size: 0.8rem; // Smaller font size for span
+        }
+      }
+    }
+  }

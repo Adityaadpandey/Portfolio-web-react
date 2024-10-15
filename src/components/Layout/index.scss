@@ -42,7 +42,8 @@
 
 .container.contact-page,
 .container.about-page,
-.container.portfolio-page {
+.container.portfolio-page,
+.container .guestbook-page {
   h1 {
     font-size: 53px;
     font-family: 'Coolvetica';
@@ -143,7 +144,7 @@
 
   .text-zone {
     position: absolute;
-    left: 10%;
+    left: 12%;
     top: 50%;
     transform: translateY(-50%);
     width: 35%;
@@ -171,7 +172,7 @@
 
     &.contact-page,
     &.about-page,
-    &.portfolio-page {
+    &.portfolio-page & .guestbook-page {
       .text-zone {
         position: initial;
         transform: none;
