@@ -15,6 +15,11 @@
   video {
     height: 600px;
     width: auto;
+  
+  // width: 100%; // Adjust to container
+  // height: 100%; // Adjust to container
+  object-fit: cover; // Make sure it covers the container
+  display: block; // Remove any unwanted inline space
   }
 
   svg {
