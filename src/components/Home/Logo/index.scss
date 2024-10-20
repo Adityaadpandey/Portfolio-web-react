@@ -22,28 +22,29 @@
   display: block; // Remove any unwanted inline space
   }
 
-  svg {
-    width: 100%;
-    height: auto;
-    bottom: 0;
-    // transform: rotateZ(30deg) !important;
-  }
-
-  .solid-logo {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
-    width: 100%;
-    opacity: 0;
-    transform: rotateZ(30deg) !important;
-    z-index: 1;
-  }
+  
 }
 
-.svg-container {
-  stroke: rgb(166, 0, 255);
-  stroke-width: 10;
+@media screen and (max-width: 1200px) {
+  // Adjust typography for mobile
+  .logo-container {
+    // z-index: 0;
+    position: fixed;
+    // top: 5000;
+    height: 1000px;
+    // right: 0;
+    filter: hue-rotate(100);
+    filter: drop-shadow(100);
+    // margin-top: 0px;
+    // margin-right: 150px;
+    // bottom: 500;
+    // background-blend-mode: color-burn;
+    // left: auto;
+    // margin: auto;
+    video {
+      height: 400px;
+      width: auto;
+    }
+  }
+  
 }

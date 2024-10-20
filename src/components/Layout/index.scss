@@ -207,3 +207,64 @@
     overflow: visible;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  // Adjust typography for mobile
+  .home-page h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .home-page h2 {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .flat-button {
+    font-size: 12px;
+    padding: 8px 16px;
+    letter-spacing: 3px;
+    float: none; // Remove float for mobile
+    display: block;
+    margin: 20px auto; // Center the button
+    width: auto;
+  }
+
+  // Optimize layout for mobile
+  .home-page .text-zone {
+    width: 90%; // Expand to full width
+    left: 5%; // Center horizontally
+    top: 30%; // Adjust position
+    transform: translateY(0); // Remove vertical translation
+  }
+
+  .home-page img {
+    width: 70px; // Reduce logo size for mobile
+  }
+
+  // Adjust animations for mobile
+  .home-page h1:after {
+    animation-delay: 1.2s; // Shorten delay
+  }
+
+  .home-page h2 {
+    animation-delay: 1.5s;
+  }
+
+  .flat-button {
+    animation-delay: 1.7s;
+  }
+
+  // Container spacing for mobile
+  .container {
+    padding: 10px; // Add padding for mobile devices
+  }
+
+  .container h1 {
+    font-size: 42px;
+    margin-left: 0;
+  }
+
+  
+}
