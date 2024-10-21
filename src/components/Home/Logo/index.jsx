@@ -1,10 +1,14 @@
 import './index.scss'
 import vid from '../../../assets/cube.mp4'
+import { Suspense } from 'react'
+import Loader from 'react-loaders'
+
 
 const Logo = () => {
 
   return (
-    <div className='logo-container'>
+    <Suspense fallback={<Loader type="pacman" />}>
+       <div className='logo-container'>
       <video
         src={vid}  
         loop
@@ -14,6 +18,7 @@ const Logo = () => {
         // style={{ display: 'block' }}
       />
     </div>
+   </Suspense>
   )
 }
 
