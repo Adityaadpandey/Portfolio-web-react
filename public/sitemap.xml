@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Homepage -->
+   <url>
+      <loc>https://adpportfolio.vercel.app/</loc>
+      <lastmod>2024-10-22</lastmod>
+      <priority>1.0</priority>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <!-- Portfolio page -->
+   <url>
+      <loc>https://adpportfolio.vercel.app/portfolio</loc>
+      <lastmod>2024-10-22</lastmod>
+      <priority>0.8</priority>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <!-- Guestbook page -->
+   <url>
+      <loc>https://adpportfolio.vercel.app/guestbook</loc>
+      <lastmod>2024-10-22</lastmod>
+      <priority>0.7</priority>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <!-- Contact page -->
+   <url>
+      <loc>https://adpportfolio.vercel.app/contact</loc>
+      <lastmod>2024-10-22</lastmod>
+      <priority>0.7</priority>
+      <changefreq>monthly</changefreq>
+   </url>
+</urlset>

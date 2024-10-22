@@ -1,3 +1,20 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all robots to access everything (default)
 User-agent: *
 Disallow:
+
+# Disallow access to the following directories (adjust as per your project)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap URL to help search engines find all the pages
+Sitemap: https://adpportfolio.vercel.app/sitemap.xml
+
+# Optional: Block bots from specific resources like dynamic scripts or irrelevant content
+Disallow: /scripts/
+Disallow: /config/
+
+# Crawl delay to reduce server load (optional)
+# Crawl-delay: 10
