@@ -20,14 +20,19 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm( "service_0olntt5",'template_cz5i0uj', form.current, 'A7N1vPflw3XYeYeu-', )
+      .sendForm(
+        'service_0olntt5',
+        'template_cz5i0uj',
+        form.current,
+        'A7N1vPflw3XYeYeu-'
+      )
       .then(
         () => {
           alert('Message successfully sent!')
           window.location.reload(false)
         },
         (error) => {
-          console.log(error.text)  // Log error for debugging
+          console.log(error.text) // Log error for debugging
           alert(error.text) // Log error for debugging
         }
       )
@@ -86,7 +91,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-        Lovely Professional University (LPU),
+          Lovely Professional University (LPU),
           <br />
           Jalandhar
           <br />
@@ -97,13 +102,12 @@ const Contact = () => {
           <span>adityapandeyadp@gmail.com</span>
         </div>
         <div className="map-wrap">
-        <MapContainer center={[31.2760, 75.7814]} zoom={13}>
-  <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-  <Marker position={[31.2760, 75.7814]}>
-    <Popup>LPU Jalandhar, come over for a cup of coffee :)</Popup>
-  </Marker>
-</MapContainer>
-
+          <MapContainer center={[31.276, 75.7814]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[31.276, 75.7814]}>
+              <Popup>LPU Jalandhar, come over for a cup of coffee :)</Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="pacman" />

@@ -103,28 +103,5 @@
     width: 124px;
   }
 
-  .logo-container {
-    position: relative;
-    // width: 100px;
-    height: auto;
-    top: 50px;
-    right: 0;
-    box-sizing: border-box;
-    margin: auto;
-    left: 0;
-
-    video {
-      height: 400px;
-      width: auto;
-    }
-  }
-
-  .logo-container svg {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
-  }
+ 
 }

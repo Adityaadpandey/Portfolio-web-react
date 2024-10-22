@@ -28,15 +28,13 @@
 @media screen and (max-width: 1200px) {
   // Adjust typography for mobile
   .logo-container {
-    // z-index: 0;
-    position: fixed;
-    // top: 5000;
-    height: 1000px;
-    // right: 0;
     filter: hue-rotate(100);
+    // margin-bottom: 300px;
+    // margin-left: -10px;
     filter: drop-shadow(100);
     // margin-top: 0px;
-    // margin-right: 150px;
+    margin-right: 90px;
+
     // bottom: 500;
     // background-blend-mode: color-burn;
     // left: auto;
