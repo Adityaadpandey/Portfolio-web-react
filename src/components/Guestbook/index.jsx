@@ -9,13 +9,14 @@ const GuestBook = () => {
   const [newThought, setNewThought] = useState({ title: "", content: "" });
   
   useEffect(() => {
-    return setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 5000)
+    }, 5000);
+    return () => clearTimeout(timeoutId);
   }, [])
   useEffect(() => {
     // Fetch thoughts from API
-    fetch("https://backendrportfolio-production.up.railway.app/api")
+    fetch("https://backend-r-portfolio.onrender.com/api")
       .then((response) => response.json())
       .then((data) => setThoughts(data.reverse()))  // Reverse to get latest thoughts first
       .catch((error) => console.error("Error fetching data: ", error));
@@ -24,7 +25,7 @@ const GuestBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Post new thought to API
-    fetch("https://backendrportfolio-production.up.railway.app/api/add", {
+    fetch("https://backend-r-portfolio.onrender.com/api/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,4 +107,4 @@ const GuestBook = () => {
   );
 };
 
-export default GuestBook;
+export default GuestBook; 

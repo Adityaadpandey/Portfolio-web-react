@@ -85,9 +85,6 @@
   }
 }
 
-
-
-
 .container {
   width: 100%;
   height: 90%; // Ensure it takes up 90% of available height
@@ -180,44 +177,44 @@
   .thoughts-list {
     margin-left: 30px;
     display: grid;
-    grid-row: auto ;
+    grid-row: auto;
 
     // flex-wrap: wrap; // Allow wrapping of cards
     // justify-content: space-between; // Space between cards
     // margin-bottom: 100px;
     margin-top: 20px;
   }
-  
+
   .thought-card {
     background: rgba(255, 255, 255, 0.1); // Background for the card
     border: 1px solid #ccc; // Border style
     padding: 20px; // Inner padding for the card
     margin-bottom: 20px; // Margin below each card
-    width: calc(100% ); // Full width with margins considered
+    width: calc(100%); // Full width with margins considered
     max-width: 600px; // Maximum width for larger screens
     display: flex; // Flexbox for inner content alignment
     align-items: center; // Center items vertically
     border-radius: 8px; // Rounded corners
-  
+
     img {
       width: 50px; // Image size
       height: 50px; // Image height
       border-radius: 50%; // Circular image
       margin-right: 20px; // Space between image and text
     }
-  
+
     .thought-content {
       h3 {
         font-size: 1.2rem; // Font size for title
         margin: 0; // Remove margin
         color: rgb(166, 0, 255); // Title color
       }
-  
+
       p {
         margin: 0.5rem 0; // Margin for paragraph
         color: #fff; // Text color
       }
-  
+
       span {
         font-size: 0.9rem; // Font size for the span
         color: #888; // Color for the span
@@ -237,7 +234,7 @@
 //   .input-container {
 //     flex-direction: column; // Stack inputs vertically
 //     width: 100%; // Ensure full width
-    
+
 //     li {
 //       width: 100%; // Full width for each input
 //       margin-right: 0; // Remove right margin
@@ -266,36 +263,37 @@
 //   }
 // }
 // Media Queries for Smaller Screens
-@media screen and (max-width: 1200px) { // Target mobile devices
+@media screen and (max-width: 1200px) {
+  // Target mobile devices
   .input-container {
     padding: 15px; // Adjust padding for mobile
+  }
+  .thoughts-list {
+    justify-content: center; // Center cards on smaller screens
+  }
+
+  .thought-card {
+    width: 900px; // Full width for mobile
+    margin: 10px 0; // Margin adjustments for mobile
+    padding: 15px; // Adjust padding for mobile view
+
+    img {
+      width: 40px; // Smaller image size for mobile
+      height: 40px; // Smaller image height for mobile
     }
-    .thoughts-list {
-      justify-content: center; // Center cards on smaller screens
-    }
-  
-    .thought-card {
-      width: 900px; // Full width for mobile
-      margin: 10px 0; // Margin adjustments for mobile
-      padding: 15px; // Adjust padding for mobile view
-  
-      img {
-        width: 40px; // Smaller image size for mobile
-        height: 40px; // Smaller image height for mobile
+
+    .thought-content {
+      h3 {
+        font-size: 1.5rem; // Smaller font size for mobile
       }
-  
-      .thought-content {
-        h3 {
-          font-size: 1.5rem; // Smaller font size for mobile
-        }
-  
-        p {
-          font-size: 1rem; // Smaller paragraph font size
-        }
-  
-        span {
-          font-size: 0.8rem; // Smaller font size for span
-        }
+
+      p {
+        font-size: 1rem; // Smaller paragraph font size
+      }
+
+      span {
+        font-size: 0.8rem; // Smaller font size for span
       }
     }
   }
+}

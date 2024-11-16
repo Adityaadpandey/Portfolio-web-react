@@ -51,7 +51,7 @@ const Sidebar = () => {
         <NavLink
           activeclassname="active"
           className="portfolio-link"
-          to="/portfolio"
+          to="/portfolio-builder"
           onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faSuitcase} color="#ffff" />
