@@ -159,7 +159,7 @@
   // background: #f9f9f9;
   // border-top: 1px solid #ddd; /* Optional: separate visually from input */
   display: flex;
-  background-color: #6e45e1;
+  // background-color: #6e45e1;
   flex-direction: column; /* Allows inner elements to stack */
 }
 
@@ -176,4 +176,22 @@
   padding: 8px;
   border-radius: 4px;
   // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the response */
+}
+.rsc{
+  font-size: 14px;
+  color: #fff;
+  // padding: 8px;
+  // background-color: #6e45e1;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.fBGGBn {
+  background-color: #3333334b;
+  scrollbar-width:none;
+}
+.rsc-ts-image{
+  // display: none;
+  background-color: #333;
+  padding: 5px;
 }
