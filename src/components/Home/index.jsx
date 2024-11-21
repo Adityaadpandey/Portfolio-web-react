@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters';
-import LogoTitle from '../../assets/images/logo.svg';
-import Logo from './Logo';
-import './index.scss';
-import ChatBot from 'react-simple-chatbot';
-import axios from 'axios';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import Loader from 'react-loaders'
+import { Link } from 'react-router-dom'
+import ChatBot from 'react-simple-chatbot'
+import LogoTitle from '../../assets/images/logo.svg'
+import AnimatedLetters from '../AnimatedLetters'
+import Logo from './Logo'
+import './index.scss'
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [letterClass, setLetterClass] = useState('text-animate')
+  const [isChatOpen, setIsChatOpen] = useState(false)
 
-  const nameArray = ['d', 'i', 't', 'y', 'a'];
+  const nameArray = ['d', 'i', 't', 'y', 'a']
   const jobArray = [
     'A',
     'I',
@@ -37,22 +37,22 @@ const Home = () => {
     'e',
     'v',
     '.',
-  ];
+  ]
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
+      setLetterClass('text-animate-hover')
+    }, 4000)
+    return () => clearTimeout(timer)
+  }, [])
 
   const handleToggleChat = () => {
-    setIsChatOpen(!isChatOpen);
-  };
+    setIsChatOpen(!isChatOpen)
+  }
 
   const CustomResponse = ({ previousStep, steps, triggerNextStep }) => {
-    const [response, setResponse] = useState('Fetching response...');
-  
+    const [response, setResponse] = useState('Fetching response...')
+
     useEffect(() => {
       const fetchResponse = async () => {
         try {
@@ -60,32 +60,31 @@ const Home = () => {
             'https://backend-r-portfolio.onrender.com/api/agi',
             { chat: previousStep.message },
             { headers: { 'Content-Type': 'application/json' } }
-          );
-  
+          )
+
           if (typeof apiResponse.data.result === 'object') {
             // Format objects for better readability
-            setResponse(JSON.stringify(apiResponse.data.result, null, 2));
+            setResponse(JSON.stringify(apiResponse.data.result, null, 2))
           } else {
-            setResponse(apiResponse.data.result);
+            setResponse(apiResponse.data.result)
           }
         } catch (error) {
-          console.error('Error fetching chat response:', error);
-          setResponse('An error occurred while fetching the response.');
+          console.error('Error fetching chat response:', error)
+          setResponse('An error occurred while fetching the response.')
         } finally {
-          triggerNextStep();
+          triggerNextStep()
         }
-      };
-  
-      fetchResponse();
-    }, [previousStep, triggerNextStep]);
-  
+      }
+
+      fetchResponse()
+    }, [previousStep, triggerNextStep])
+
     return (
       <div className="custom-response">
         <pre className="response-text">{response}</pre>
       </div>
-    );
-  };
-  
+    )
+  }
 
   const steps = [
     {
@@ -104,7 +103,7 @@ const Home = () => {
       waitAction: true,
       trigger: '1',
     },
-  ];
+  ]
 
   return (
     <>
@@ -145,13 +144,16 @@ const Home = () => {
       </button>
 
       {isChatOpen && (
-        <div className="chatbot-container">
-          <ChatBot steps={steps} />
-        </div>
-      )}
+  <div className="chatbot-container">
+    <button className="close-button" onClick={handleToggleChat}>
+      ✕
+    </button>
+    <ChatBot steps={steps} />
+  </div>
+)}
       <Loader type="pacman" />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

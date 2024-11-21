@@ -107,7 +107,6 @@
   right: 20px;
   width: 350px;
   height: 520px;
-  // background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
   border: 1px solid rgba(0, 0, 0, 0.134);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -115,13 +114,31 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  backdrop-filter: blur(8px); /* Glass effect */
+  backdrop-filter: blur(8px);
 
   @media screen and (max-width: 768px) {
     width: 90%;
     height: 70%;
     bottom: 20px;
     right: 5%;
+  }
+
+  .close-button {
+    position: relative;
+    top: 120px;
+    right: -150px;
+    background: transparent;
+    border: none;
+    color: #ff5c5c;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 9999;
+
+    &:hover {
+      color: #ff0000;
+      background-color: rgb(166, 0, 255);
+    }
   }
 
   .chat-header {
@@ -133,56 +150,8 @@
     font-size: 16px;
     border-radius: 12px 12px 0 0;
   }
-
-  .chat-content {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling for long responses */
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
-
-    /* Add padding and background for better readability */
-    // background: rgba(245, 245, 245, 0.8);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .chat-footer {
-    // background: rgba(255, 255, 255, 0.95);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    input[type='text'] {
-      flex: 1;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 6px;
-      padding: 10px;
-      margin-right: 10px;
-      font-size: 14px;
-    }
-
-    button {
-      background: #6e45e1;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background 0.3s;
-
-      &:hover {
-        background: #88d3ce;
-      }
-    }
-  }
 }
+
 .custom-response {
   flex: 1; /* Ensures the response container fills available space */
   padding: 2px;
