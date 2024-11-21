@@ -1,122 +1,119 @@
-.cv-builder{
+.cv-builder {
   .text-zone {
-    //   position: absolute;
-      right: 12%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 35%;
-      vertical-align: middle;
-    //   display: table-cell;
-      max-height: 90%;
+    right: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle;
+    max-height: 90%;
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: #fff;
     }
-    
-    .text-animate-hover {
-      &:hover {
-        color: #fff;
-      }
-    }
-    h1 {
-      font-size: 53px;
-      font-family: 'Coolvetica';
+  }
+
+  h1 {
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    color: rgb(166, 0, 255);
+    font-weight: 400;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: -40px;
+    left: 170px;
+
+    &:before {
+      content: '<h1>';
+      font-family: 'La Belle Aurore', cursive;
       color: rgb(166, 0, 255);
-      font-weight: 400;
-      margin-top: 100px;
-      position: relative;
-      margin-bottom: -40px;
-      left: 170px;
-    
-      &:before {
-        content: '<h1>';
-        font-family: 'La Belle Aurore', cursive;
-        color: rgb(166, 0, 255);
-        font-size: 18px;
-        position: absolute;
-        margin-top: -10px;
-        left: -10px;
-        opacity: 0.6;
-        line-height: 18px;
-      }
-    
-      &:after {
-        content: '<h1/>';
-        font-family: 'La Belle Aurore', cursive;
-        color: rgb(166, 0, 255);
-        font-size: 18px;
-        line-height: 18px;
-        position: absolute;
-        left: -30px;
-        bottom: -20px;
-        margin-left: 20px;
-        opacity: 0.6;
-      }
+      font-size: 18px;
+      position: absolute;
+      margin-top: -10px;
+      left: -10px;
+      opacity: 0.6;
+      line-height: 18px;
     }
-    
-    p {
-        font-size: 16px;
-        color: #fff;
-        // left: 5px;
-        margin-top: 80px;
-        position: relative;
-      margin-bottom: -40px;
-      left: 200px;
-        font-family: sans-serif;
-        font-weight: 300;
-        max-width: fit-content;
-        opacity: 0; // Start hidden
-        animation: fadeIn 1s forwards; // Apply fade-in animation
-        position: relative; // Needed for pseudo-elements
-        animation-delay: 0s; // Default delay
-    
-        &:before {
-          content: '<p>';
-          font-family: 'La Belle Aurore', cursive;
-          color: rgb(166, 0, 255);
-          font-size: 18px;
-          position: absolute;
-          margin-top: -15px;
-          left: -10px;
-          opacity: 0.6;
-          line-height: 18px;
-        }
-    
-        &:nth-of-type(1) {
-          animation-delay: 2.5s; // Delay for the first child
-        }
-    
-        &:nth-of-type(2) {
-          animation-delay: 3.5s; // Delay for the second child
-        }
-    
-        &:nth-of-type(3) {
-          animation-delay: 4.5s; // Delay for the third child
-        }
-    
-        &:after {
-          content: '<p/>';
-          font-family: 'La Belle Aurore', cursive;
-          color: rgb(166, 0, 255);
-          font-size: 18px;
-          line-height: 18px;
-          position: absolute;
-          left: -30px;
-          bottom: -20px;
-          margin-left: 20px;
-          opacity: 0.6;
-        }
-      }
-    
-    @keyframes fadeIn {
-      0% {
-        opacity: 0; // Start completely transparent
-        transform: translateY(-10px); // Optional: add a little upward movement
-      }
-      100% {
-        opacity: 1; // End fully visible
-        transform: translateY(0); // End in the original position
-      }
+
+    &:after {
+      content: '<h1/>';
+      font-family: 'La Belle Aurore', cursive;
+      color: rgb(166, 0, 255);
+      font-size: 18px;
+      line-height: 18px;
+      position: absolute;
+      left: -30px;
+      bottom: -20px;
+      margin-left: 20px;
+      opacity: 0.6;
     }
-    
+  }
+
+  p {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 80px;
+    position: relative;
+    margin-bottom: -40px;
+    left: 200px;
+    font-family: sans-serif;
+    font-weight: 300;
+    max-width: fit-content;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0s;
+
+    &:before {
+      content: '<p>';
+      font-family: 'La Belle Aurore', cursive;
+      color: rgb(166, 0, 255);
+      font-size: 18px;
+      position: absolute;
+      margin-top: -15px;
+      left: -10px;
+      opacity: 0.6;
+      line-height: 18px;
+    }
+
+    &:nth-of-type(1) {
+      animation-delay: 2.5s;
+    }
+
+    &:nth-of-type(2) {
+      animation-delay: 3.5s;
+    }
+
+    &:nth-of-type(3) {
+      animation-delay: 4.5s;
+    }
+
+    &:after {
+      content: '<p/>';
+      font-family: 'La Belle Aurore', cursive;
+      color: rgb(166, 0, 255);
+      font-size: 18px;
+      line-height: 18px;
+      position: absolute;
+      left: -30px;
+      bottom: -20px;
+      margin-left: 20px;
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
+
 .form-sect {
   display: flex;
   flex-direction: column;

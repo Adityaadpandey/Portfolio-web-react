@@ -1,49 +1,38 @@
 .home-page {
   .text-zone {
     position: absolute;
-    left: 12%;
+    left: 10%;
     top: 50%;
     transform: translateY(-50%);
-    width: 40%;
+    width: 45%;
     max-height: 90%;
-    // white-space: nowrap;
+    color: #ffffff; /* Improve contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+    @media screen and (max-width: 768px) {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
   }
 
   h1 {
-    color: #eaeaeae8;
-    font-size: 56px;
-    line-height: 53px;
+    color: #f9f9f9;
+    font-size: 64px; /* Larger font for modern feel */
+    line-height: 1.2;
     margin: 0;
-    font-family: 'Playfair';
+    font-family: 'Playfair', serif;
     font-weight: 600;
-
-    &:before {
-      content: '<h1>';
-      font-family: 'La Belle Aurore', cursive;
-      color: rgb(166, 0, 255);
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: -15px;
-      opacity: 0.6;
-    }
-
-    &:after {
-      content: '<h1/>';
-      font-family: 'La Belle Aurore', cursive;
-      color: rgb(166, 0, 255);
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
-      opacity: 0.6;
-    }
+    position: relative;
 
     img {
       margin-left: 20px;
       opacity: 0;
-      width: 100px;
+      width: 120px;
       height: auto;
       animation: rotateIn 1s linear both;
       animation-delay: 1.4s;
@@ -51,57 +40,169 @@
   }
 
   h2 {
-    color: #8d8d8d;
+    color: #eaeaea;
     margin-top: 20px;
-    font-weight: 400;
-    font-size: 11px;
-    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   }
 
   .flat-button {
-    color: rgb(166, 0, 255);
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    font-family: sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid rgb(166, 0, 255);
-    margin-top: 25px;
+    padding: 12px 20px;
+    border: 2px solid rgba(166, 0, 255, 0.8);
+    border-radius: 8px;
+    margin-top: 30px;
     float: left;
+    background: rgba(166, 0, 255, 0.1);
     animation: fadeInAnimation 1s 1.8s backwards;
-    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
-      background: rgb(166, 0, 255);
-      color: #333;
+      background: rgba(166, 0, 255, 0.8);
+      color: white;
+      transform: scale(1.05);
     }
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .tags,
-  .home-page h1:before,
-  .home-page h1:after {
-    display: none;
+.chat-toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #6e45e1, #88d3ce);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s, background 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.1);
+    background: linear-gradient(135deg, #88d3ce, #6e45e1);
   }
 
-  .home-page .text-zone {
-    position: initial;
-    width: 100%;
-    transform: none;
+  &:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 530px;
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  backdrop-filter: blur(8px); /* Glass effect */
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    height: 70%;
+    bottom: 20px;
+    right: 5%;
+  }
+
+  .chat-header {
+    background: #6e45e1;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .chat-content {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling for long responses */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+
+    /* Add padding and background for better readability */
+    background: rgba(245, 245, 245, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .chat-footer {
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px;
-    box-sizing: border-box;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .home-page .flat-button {
-    float: none;
-    display: block;
-    margin: 20px auto 0 auto;
-    width: 124px;
-  }
+    input[type='text'] {
+      flex: 1;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      padding: 10px;
+      margin-right: 10px;
+      font-size: 14px;
+    }
 
- 
+    button {
+      background: #6e45e1;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #88d3ce;
+      }
+    }
+  }
+}
+.custom-response {
+  flex: 1; /* Ensures the response container fills available space */
+  padding: 10px;
+  overflow-y: auto; /* Enables scrolling for long content */
+  background: #f9f9f9;
+  border-top: 1px solid #ddd; /* Optional: separate visually from input */
+  display: flex;
+  flex-direction: column; /* Allows inner elements to stack */
+}
+
+.response-text {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for clarity */
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* Preserve line breaks and whitespace */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word; /* Ensures compatibility with modern browsers */
+  color: #333;
+  max-width: 100%; /* Ensures text stays within the container */
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the response */
 }
