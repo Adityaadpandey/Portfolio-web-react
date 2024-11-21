@@ -144,13 +144,13 @@ const Home = () => {
       </button>
 
       {isChatOpen && (
-  <div className="chatbot-container">
-    <button className="close-button" onClick={handleToggleChat}>
-      ✕
-    </button>
-    <ChatBot steps={steps} />
-  </div>
-)}
+        <div className="chatbot-container">
+          <button className="close-button" onClick={handleToggleChat}>
+            ✕
+          </button>
+          <ChatBot steps={steps} />
+        </div>
+      )}
       <Loader type="pacman" />
     </>
   )
