@@ -30,9 +30,10 @@
     position: relative;
 
     img {
-      margin-left: 20px;
+      // margin-left: 20px;
       opacity: 0;
-      width: 120px;
+      width: 100px;
+      margin-right: -20px;
       height: auto;
       animation: rotateIn 1s linear both;
       animation-delay: 1.4s;
@@ -105,9 +106,9 @@
   bottom: 80px;
   right: 20px;
   width: 350px;
-  height: 530px;
-  background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 520px;
+  // background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  border: 1px solid rgba(0, 0, 0, 0.134);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   z-index: 9999;
@@ -144,13 +145,13 @@
     line-height: 1.5;
 
     /* Add padding and background for better readability */
-    background: rgba(245, 245, 245, 0.8);
+    // background: rgba(245, 245, 245, 0.8);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .chat-footer {
-    background: rgba(255, 255, 255, 0.95);
+    // background: rgba(255, 255, 255, 0.95);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: flex;
@@ -184,10 +185,10 @@
 }
 .custom-response {
   flex: 1; /* Ensures the response container fills available space */
-  padding: 10px;
+  padding: 2px;
   overflow-y: auto; /* Enables scrolling for long content */
-  background: #f9f9f9;
-  border-top: 1px solid #ddd; /* Optional: separate visually from input */
+  // background: #f9f9f9;
+  // border-top: 1px solid #ddd; /* Optional: separate visually from input */
   display: flex;
   flex-direction: column; /* Allows inner elements to stack */
 }
@@ -201,8 +202,8 @@
   overflow-wrap: break-word; /* Ensures compatibility with modern browsers */
   color: #333;
   max-width: 100%; /* Ensures text stays within the container */
-  background-color: #fff;
+  // background-color: #fff;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the response */
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the response */
 }

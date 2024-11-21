@@ -12,7 +12,7 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-  const nameArray = ['A', 'd', 'i', 't', 'y', 'a'];
+  const nameArray = ['d', 'i', 't', 'y', 'a'];
   const jobArray = [
     'A',
     'I',
