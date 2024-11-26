@@ -1,14 +1,14 @@
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
+import './App.scss'
 import About from './components/About'
 import Contact from './components/Contact'
-import Layout from './components/Layout'
-import Portfolio from './components/Portfolio'
 import Guestbook from './components/Guestbook'
+import Home from './components/Home'
+import Layout from './components/Layout'
+import './components/Layout/index.scss'
+import Portfolio from './components/Portfolio'
 import PortfolioBuilder from './components/Portfolio-builder'
-import './App.scss'
-import "./components/Layout/index.scss"
-import React from 'react'
 
 function App() {
   return (
